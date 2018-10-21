@@ -29,8 +29,8 @@ def populate(lst):
 def compute(nodes, edges):
     if len(nodes) < 1:  raise Exception('must have 1-4 parameters.')
     if len(nodes) == 1:
-        return nodes[0].replace('d[', '').replace(']', '').replace('!=', 'xor').replace(
-            '0', 'a').replace('1', 'b').replace('2', 'c').replace('3', 'd').replace('4', 'f').upper()
+        return nodes[0].replace('d[', '').replace(']', '').replace('!=', ' AND NOT ').replace(
+            '0', 'P').replace('1', 'Q').replace('2', 'R').replace('3', 'S').replace('4', 'T').upper()
     nodes = list(set(nodes))
     expr_scores = []
     for edge in edges:
